@@ -1,38 +1,68 @@
+
 .App {
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+h1{
+  font-family: "Indie Flower", cursive;
+  font-size: 20px;
+  margin-left: 20px;
+  color: rgba(0, 0, 0, 0.616);
+}
+.InputAndButton{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 50px 0 50px 0;
+}
+input {
+  background-color: white; 
+  padding: 10px;
+  border: 1px solid #fcfcfc; 
+  transition: background-color 0.3s ease; /* Плавное изменение цвета фона */
+  width: 230px;
+  font-family: "Indie Flower", cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input:focus {
+  background-color: #fff8b9; /* Ярче при фокусе */
+}
+.SubmitButton{
+  background-color: #fff889;
+  border: none;
+  width: 40px ;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.note-container{
+  width: 120px;
+  height: 120px;
+  margin: 10px;
+  background-color: #FFFF88;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Note{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  min-height: 120px; /*позволило прижать EditAndTrash к низу*/
+  box-shadow: 5px 5px 7px rgba(187, 183, 152, 0.7);
+}
+.NoteContent {
+  width: 120px;
+  word-wrap: break-word; /* Для поддержки старых браузеров */
+  overflow-wrap: break-word; /* Стандартное свойство */
+  flex-grow: 1; 
+  font-family: "Indie Flower", cursive;
 }
 
-.App-link {
-  color: #61dafb;
+.EditAndTrash{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 2px;
+  padding-right: 2px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.NoteIcon{
+  cursor: default;
 }
